@@ -1,4 +1,4 @@
-module github.com/inverse-inc/scep
+module github.com/fdurand/scep
 
 require (
 	github.com/boltdb/bolt v1.3.1
