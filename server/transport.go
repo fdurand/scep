@@ -118,7 +118,8 @@ func message(r *http.Request) ([]byte, error) {
 		}
 		return []byte(msg), nil
 	case "POST":
-		return ioutil.ReadAll(io.LimitReader(r.Body, maxPayloadSize))
+		return ioutil.ReadAll(r.Body)
+		//return ioutil.ReadAll(io.LimitReader(r.Body, maxPayloadSize))
 	default:
 		return nil, errors.New("method not supported")
 	}
