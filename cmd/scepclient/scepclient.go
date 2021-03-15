@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/fdurand/pkcs7"
+	"github.com/inverse-inc/pkcs7"
 	"github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/log/level"
 	"github.com/fdurand/scep/client"

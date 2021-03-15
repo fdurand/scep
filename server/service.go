@@ -11,6 +11,7 @@ import (
 	"math/big"
 	"time"
 
+	"github.com/davecgh/go-spew/spew"
 	"github.com/fdurand/scep/challenge"
 	"github.com/fdurand/scep/csrverifier"
 	"github.com/fdurand/scep/depot"
@@ -91,6 +92,8 @@ func (svc *service) PKIOperation(ctx context.Context, data []byte) ([]byte, erro
 	if err := msg.DecryptPKIEnvelope(svc.ca[0], svc.caKey); err != nil {
 		return nil, err
 	}
+
+	spew.Dump(msg.CSRReqMessage.ChallengePassword)
 
 	// validate challenge passwords
 	if msg.MessageType == scep.PKCSReq {
