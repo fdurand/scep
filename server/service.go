@@ -8,7 +8,7 @@ import (
 	"fmt"
 
 	"github.com/fdurand/scep/scep"
-
+	"github.com/davecgh/go-spew/spew"
 	"github.com/go-kit/kit/log"
 )
 
@@ -89,7 +89,8 @@ func (svc *service) PKIOperation(ctx context.Context, data []byte) ([]byte, erro
 	}
 
 	crt, err := svc.signer.SignCSR(msg.CSRReqMessage)
-
+	spew.Dump(err)
+	spew.Dump(msg.CSRReqMessage.CSR)
 	if err == nil && crt == nil {
 		err = errors.New("no signed certificate")
 	}
