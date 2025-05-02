@@ -5,8 +5,8 @@ import (
 	"crypto/x509"
 	"errors"
 
-	"github.com/inverse-inc/scep/scep"
-	scepserver "github.com/inverse-inc/scep/server"
+	"github.com/fdurand/scep/scep"
+	scepserver "github.com/fdurand/scep/server"
 )
 
 // CSRVerifier verifies the raw decrypted CSR.

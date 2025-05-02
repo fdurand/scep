@@ -5,7 +5,7 @@ import (
 	"crypto/x509"
 	"math/big"
 
-	"github.com/inverse-inc/scep/scep"
+	"github.com/fdurand/scep/scep"
 )
 
 // Depot is a repository for managing certificates

@@ -1,7 +1,7 @@
 package scepclient
 
 import (
-	scepserver "github.com/inverse-inc/scep/server"
+	scepserver "github.com/fdurand/scep/server"
 
 	"github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/log/level"

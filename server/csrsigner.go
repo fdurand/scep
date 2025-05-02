@@ -5,7 +5,7 @@ import (
 	"crypto/x509"
 	"errors"
 
-	"github.com/inverse-inc/scep/scep"
+	"github.com/fdurand/scep/scep"
 )
 
 // CSRSigner is a handler for CSR signing by the CA/RA

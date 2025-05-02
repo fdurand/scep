@@ -17,12 +17,12 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/inverse-inc/scep/cryptoutil"
-	"github.com/inverse-inc/scep/csrverifier"
-	executablecsrverifier "github.com/inverse-inc/scep/csrverifier/executable"
-	scepdepot "github.com/inverse-inc/scep/depot"
-	"github.com/inverse-inc/scep/depot/file"
-	scepserver "github.com/inverse-inc/scep/server"
+	"github.com/fdurand/scep/cryptoutil"
+	"github.com/fdurand/scep/csrverifier"
+	executablecsrverifier "github.com/fdurand/scep/csrverifier/executable"
+	scepdepot "github.com/fdurand/scep/depot"
+	"github.com/fdurand/scep/depot/file"
+	scepserver "github.com/fdurand/scep/server"
 
 	"github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/log/level"

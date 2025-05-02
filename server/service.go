@@ -7,7 +7,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/inverse-inc/scep/scep"
+	"github.com/fdurand/scep/scep"
 
 	"github.com/go-kit/kit/log"
 )

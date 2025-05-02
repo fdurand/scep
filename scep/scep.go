@@ -12,10 +12,10 @@ import (
 	"encoding/asn1"
 	"encoding/base64"
 
-	"github.com/inverse-inc/scep/cryptoutil"
-	"github.com/inverse-inc/scep/cryptoutil/x509util"
+	"github.com/fdurand/scep/cryptoutil"
+	"github.com/fdurand/scep/cryptoutil/x509util"
 
-	"github.com/inverse-inc/pkcs7"
+	"github.com/fdurand/pkcs7"
 	"github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/log/level"
 	"github.com/pkg/errors"

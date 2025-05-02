@@ -11,8 +11,8 @@ import (
 	"time"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/inverse-inc/scep/cryptoutil"
-	"github.com/inverse-inc/scep/scep"
+	"github.com/fdurand/scep/cryptoutil"
+	"github.com/fdurand/scep/scep"
 )
 
 // Signer signs x509 certificates and stores them in a Depot

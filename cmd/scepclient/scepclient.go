@@ -16,8 +16,8 @@ import (
 	"strings"
 	"time"
 
-	scepclient "github.com/inverse-inc/scep/client"
-	"github.com/inverse-inc/scep/scep"
+	scepclient "github.com/fdurand/scep/client"
+	"github.com/fdurand/scep/scep"
 
 	"github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/log/level"

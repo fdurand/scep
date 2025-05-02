@@ -5,9 +5,9 @@ import (
 	"os"
 	"testing"
 
-	challengestore "github.com/inverse-inc/scep/challenge/bolt"
-	"github.com/inverse-inc/scep/scep"
-	scepserver "github.com/inverse-inc/scep/server"
+	challengestore "github.com/fdurand/scep/challenge/bolt"
+	"github.com/fdurand/scep/scep"
+	scepserver "github.com/fdurand/scep/server"
 
 	"github.com/boltdb/bolt"
 )

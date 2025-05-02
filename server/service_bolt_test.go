@@ -14,11 +14,11 @@ import (
 	"testing"
 	"time"
 
-	scepdepot "github.com/inverse-inc/scep/depot"
-	boltdepot "github.com/inverse-inc/scep/depot/bolt"
-	"github.com/inverse-inc/scep/scep"
-	scepserver "github.com/inverse-inc/scep/server"
-	challengestore "github.com/inverse-inc/scep/challenge/bolt"
+	scepdepot "github.com/fdurand/scep/depot"
+	boltdepot "github.com/fdurand/scep/depot/bolt"
+	"github.com/fdurand/scep/scep"
+	scepserver "github.com/fdurand/scep/server"
+	challengestore "github.com/fdurand/scep/challenge/bolt"
 
 	"github.com/boltdb/bolt"
 )

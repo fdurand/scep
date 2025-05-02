@@ -1,4 +1,4 @@
-module github.com/inverse-inc/scep
+module github.com/fdurand/scep
 
 go 1.16
 

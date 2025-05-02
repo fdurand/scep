@@ -11,8 +11,8 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/inverse-inc/scep/cryptoutil"
-	"github.com/inverse-inc/scep/scep"
+	"github.com/fdurand/scep/cryptoutil"
+	"github.com/fdurand/scep/scep"
 
 	"github.com/boltdb/bolt"
 )
@@ -188,7 +188,7 @@ func (db *Depot) HasCN(cn string, allowTime int, cert *x509.Certificate, revokeO
 	}
 	var hasCN bool
 	err := db.View(func(tx *bolt.Tx) error {
-		// TODO: "scep_certificates" is internal const in inverse-inc/scep
+		// TODO: "scep_certificates" is internal const in fdurand/scep
 		curs := tx.Bucket([]byte("scep_certificates")).Cursor()
 		prefix := []byte(cert.Subject.CommonName)
 		for k, v := curs.Seek(prefix); k != nil && bytes.HasPrefix(k, prefix); k, v = curs.Next() {

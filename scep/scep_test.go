@@ -12,8 +12,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/inverse-inc/scep/cryptoutil"
-	"github.com/inverse-inc/scep/scep"
+	"github.com/fdurand/scep/cryptoutil"
+	"github.com/fdurand/scep/scep"
 )
 
 func testParsePKIMessage(t *testing.T, data []byte) *scep.PKIMessage {

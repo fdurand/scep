@@ -1,19 +1,19 @@
 # scep
 
-[![CI](https://github.com/inverse-inc/scep/workflows/CI/badge.svg)](https://github.com/inverse-inc/scep/actions)
-[![Go Reference](https://pkg.go.dev/badge/github.com/inverse-inc/scep.svg)](https://pkg.go.dev/github.com/inverse-inc/scep)
+[![CI](https://github.com/fdurand/scep/workflows/CI/badge.svg)](https://github.com/fdurand/scep/actions)
+[![Go Reference](https://pkg.go.dev/badge/github.com/fdurand/scep.svg)](https://pkg.go.dev/github.com/fdurand/scep)
 
 `scep` is a Simple Certificate Enrollment Protocol server and client
 
 ## Installation
 
-Binary releases are available on the [releases page](https://github.com/inverse-inc/scep/releases).
+Binary releases are available on the [releases page](https://github.com/fdurand/scep/releases).
 
 ### Compiling from source
 
 To compile the SCEP client and server you will need [a Go compiler](https://golang.org/dl/) as well as standard tools like git, make, etc.
 
-1. Clone the repository and get into the source directory: `go get github.com/inverse-inc/scep && cd src/github.com/inverse-inc/scep`
+1. Clone the repository and get into the source directory: `go get github.com/fdurand/scep && cd src/github.com/fdurand/scep`
 2. Compile the client and server binaries: `make`
 
 The binaries will be compiled in the current directory and named after the architecture. I.e. `scepclient-linux-amd64` and `scepserver-linux-amd64`.
@@ -164,13 +164,13 @@ If you're not sure which SHA-256 hash (for a specific CA) to use, you can use th
 make docker
 
 # build the image
-docker build -t inverse-inc/scep:latest .
+docker build -t fdurand/scep:latest .
 
 # create CA
-docker run -it --rm -v /path/to/ca/folder:/depot inverse-inc/scep:latest ca -init
+docker run -it --rm -v /path/to/ca/folder:/depot fdurand/scep:latest ca -init
 
 # run
-docker run -it --rm -v /path/to/ca/folder:/depot -p 8080:8080 inverse-inc/scep:latest
+docker run -it --rm -v /path/to/ca/folder:/depot -p 8080:8080 fdurand/scep:latest
 ```
 
 ## SCEP library
@@ -178,10 +178,10 @@ docker run -it --rm -v /path/to/ca/folder:/depot -p 8080:8080 inverse-inc/scep:l
 The core `scep` library can be used for both client and server operations.
 
 ```
-go get github.com/inverse-inc/scep/scep
+go get github.com/fdurand/scep/scep
 ```
 
-For detailed usage, see the [Go Reference](https://pkg.go.dev/github.com/inverse-inc/scep/scep).
+For detailed usage, see the [Go Reference](https://pkg.go.dev/github.com/fdurand/scep/scep).
 
 Example (server):
 
