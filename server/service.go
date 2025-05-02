@@ -89,6 +89,7 @@ func (svc *service) PKIOperation(ctx context.Context, data []byte) ([]byte, erro
 	}
 
 	crt, err := svc.signer.SignCSR(msg.CSRReqMessage)
+	spew.Dump(svc)
 	spew.Dump(err)
 	spew.Dump(msg.CSRReqMessage.CSR)
 	if err == nil && crt == nil {
