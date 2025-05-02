@@ -10,7 +10,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/davecgh/go-spew/spew"
 	"github.com/fdurand/scep/cryptoutil"
 	"github.com/fdurand/scep/scep"
 )
@@ -82,8 +81,7 @@ func WithProfile(profile string) Option {
 
 // SignCSR signs a certificate using Signer's Depot CA
 func (s *Signer) SignCSR(m *scep.CSRReqMessage) (*x509.Certificate, error) {
-	spew.Dump(s)
-	spew.Dump(m.CSR)
+
 	id, err := cryptoutil.GenerateSubjectKeyID(m.CSR.PublicKey)
 	if err != nil {
 		return nil, err
@@ -147,7 +145,7 @@ func (s *Signer) SignCSR(m *scep.CSRReqMessage) (*x509.Certificate, error) {
 	if err != nil {
 		return nil, err
 	}
-	spew.Dump(tmpl)
+
 	crtBytes, err := x509.CreateCertificate(rand.Reader, tmpl, caCerts[0], m.CSR.PublicKey, caKey)
 	if err != nil {
 		return nil, err
