@@ -82,7 +82,7 @@ func WithProfile(profile string) Option {
 
 // SignCSR signs a certificate using Signer's Depot CA
 func (s *Signer) SignCSR(m *scep.CSRReqMessage) (*x509.Certificate, error) {
-
+	spew.Dump(m.CSR)
 	id, err := cryptoutil.GenerateSubjectKeyID(m.CSR.PublicKey)
 	if err != nil {
 		return nil, err
